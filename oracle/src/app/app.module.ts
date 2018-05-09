@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
@@ -15,7 +15,15 @@ import { IpfsService } from './ipfs.service';
 
 @NgModule({
   declarations: [AppComponent, PeersComponent, UploadComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, NgZorroAntdModule.forRoot(), CommonModule, FormsModule, RouterModule.forRoot(ROUTES)],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgZorroAntdModule.forRoot(),
+    CommonModule,
+    FormsModule,
+    RouterModule.forRoot(ROUTES),
+  ],
   providers: [IpfsService],
   bootstrap: [AppComponent],
 })

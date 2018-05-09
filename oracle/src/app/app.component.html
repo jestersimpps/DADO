@@ -7,7 +7,9 @@
       <li nz-menu-item [routerLink]="['peers']" routerLinkActive="ant-menu-item-selected">
         <span>
           <i class="anticon anticon-bars"></i>
-          <span class="nav-text">Peers</span>
+          <span class="nav-text">Peers
+            <nz-badge [nzCount]="peers.length" [nzStyle]="{ backgroundColor: '#fff',color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"></nz-badge>
+          </span>
         </span>
       </li>
       <li nz-menu-item [routerLink]="['upload']" routerLinkActive="ant-menu-item-selected">
@@ -18,7 +20,7 @@
       </li>
     </ul>
   </nz-sider>
-  <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '0px' : '200px'}" class="flexwrapper">
-    <router-outlet ></router-outlet>
+  <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '0px' : '200px'}">
+    <router-outlet></router-outlet>
   </nz-layout>
 </nz-layout>

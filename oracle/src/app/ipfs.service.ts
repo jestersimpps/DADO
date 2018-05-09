@@ -2,7 +2,6 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 
 declare let Ipfs;
-declare let Buffer;
 
 @Injectable()
 export class IpfsService {
