@@ -12,8 +12,10 @@ import { trigger, state, style, animate, transition, keyframes, query, stagger }
   animations: [
     trigger('listAnimation', [
       transition('* => *', [
-        query(':leave', [stagger(100, [animate('0.5s', style({ opacity: 0 }))])], { optional: true }),
-        query(':enter', [style({ opacity: 0 }), stagger(100, [animate('0.5s', style({ opacity: 1 }))])], { optional: true }),
+        query(':leave', [stagger(100, [animate('2s', style({ opacity: 0, color: 'red' }))])], { optional: true }),
+        query(':enter', [style({ opacity: 0, color: 'green' }), stagger(100, [animate('2s', style({ opacity: 1 }))])], {
+          optional: true,
+        }),
       ]),
     ]),
   ],
