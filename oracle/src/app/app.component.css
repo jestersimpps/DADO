@@ -15,5 +15,6 @@
     background: rgba(255, 255, 255, .8);
     border-radius: 5px;
     margin: 16px;
-    padding:5px;
+    padding-bottom:5px;
+    padding-left:20px;
   }

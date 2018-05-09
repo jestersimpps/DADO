@@ -1,5 +1,15 @@
-<p>
-  peers works!
-</p>
-
-
+<nz-header style="background: #fff; padding:0;">
+</nz-header>
+<nz-content style="margin:24px 16px 0;">
+  <div style="padding:24px; background: #fff; min-height: 360px;">
+    <nz-list [nzDataSource]="peers" nzBordered nzSize="small" [nzHeader]="'Peers ('+ peers.length + ')'" [nzFooter]="''" [nzRenderItem]="item">
+      <ng-template #item let-item>
+        <nz-list-item>
+          <i class="anticon anticon-swap"></i>
+          {{item}}
+        </nz-list-item>
+      </ng-template>
+    </nz-list>
+  </div>
+</nz-content>
+<nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>

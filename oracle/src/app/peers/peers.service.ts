@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
-declare const Ipfs;
+import { Injectable, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
+
+declare let Ipfs;
 declare let Buffer;
 
 @Injectable()
 export class PeersService {
   public ipfs;
-  public peers;
+  public peersChange: EventEmitter<string[]> = new EventEmitter();
 
   constructor() {
     const options = {
@@ -20,24 +22,36 @@ export class PeersService {
   }
 
   init() {
-    Buffer = this.ipfs.types.Buffer;
-
     this.ipfs.once('start', () =>
       this.ipfs.id((err, id) => {
         if (err) {
           return console.error(err);
         }
-        // setInterval(refreshPeerList, 1000);
+        setInterval(() => {
+          this.refreshPeers();
+        }, 1000);
       }),
     );
   }
 
-  refreshPeerList() {
+  refreshPeers() {
     this.ipfs.swarm.peers((err, peers) => {
       if (err) {
         return console.error(err);
       }
-      this.peers = peers;
+      this.peersChange.emit(
+        peers.map((peer) => {
+          console.log(peer);
+          if (peer.addr) {
+            const addr = peer.addr.toString();
+            if (addr.indexOf('ipfs') >= 0) {
+              return addr;
+            } else {
+              return addr + peer.peer.id.toB58String();
+            }
+          }
+        }),
+      );
     });
   }
 }

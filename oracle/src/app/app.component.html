@@ -4,10 +4,10 @@
       <img src="assets/ipfs.png" height="50" alt="">
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
-      <li nz-menu-item>
+      <li nz-menu-item [routerLink]="['peers']" routerLinkActive="ant-menu-item-selected" >
         <span>
-          <i class="anticon anticon-user"></i>
-          <span class="nav-text">nav 1</span>
+          <i class="anticon anticon-bars"></i>
+          <span class="nav-text">Peers</span>
         </span>
       </li>
       <li nz-menu-item>
@@ -31,13 +31,6 @@
     </ul>
   </nz-sider>
   <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '0px' : '200px'}">
-    <nz-header style="background: #fff; padding:0;">
-    </nz-header>
-    <nz-content style="margin:24px 16px 0;">
-      <div style="padding:24px; background: #fff; min-height: 360px;">
-          <app-peers></app-peers>
-      </div>
-    </nz-content>
-    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+    <router-outlet></router-outlet>
   </nz-layout>
 </nz-layout>
