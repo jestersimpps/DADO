@@ -1,14 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PeersService } from './peers.service';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs';
 import { trigger, state, style, animate, transition, keyframes, query, stagger } from '@angular/animations';
+import { IpfsService } from '../ipfs.service';
 
 @Component({
   selector: 'app-peers',
   templateUrl: './peers.component.html',
   styleUrls: ['./peers.component.css'],
-  providers: [PeersService],
   animations: [
     trigger('listAnimation', [
       transition('* => *', [
@@ -24,11 +23,10 @@ export class PeersComponent implements OnInit, OnDestroy {
   private peers: string[] = [];
   private peersSubscription: Subscription;
 
-  constructor(private peersService: PeersService) {}
+  constructor(private ipfsService: IpfsService) {}
 
   ngOnInit() {
-    this.peersService.init();
-    this.peersSubscription = this.peersService.peersChange.subscribe((peers) => {
+    this.peersSubscription = this.ipfsService.peersChange.subscribe((peers) => {
       this.peers = peers;
     });
     // TODO: figure out why this updates the dom, and not inside the subscription

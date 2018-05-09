@@ -5,7 +5,7 @@ declare let Ipfs;
 declare let Buffer;
 
 @Injectable()
-export class PeersService {
+export class IpfsService {
   public ipfs;
   public peersChange: EventEmitter<string[]> = new EventEmitter();
 

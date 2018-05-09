@@ -4,7 +4,7 @@
       <img src="assets/ipfs.png" height="50" alt="">
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
-      <li nz-menu-item [routerLink]="['peers']" routerLinkActive="ant-menu-item-selected" >
+      <li nz-menu-item [routerLink]="['peers']" routerLinkActive="ant-menu-item-selected">
         <span>
           <i class="anticon anticon-bars"></i>
           <span class="nav-text">Peers</span>
@@ -18,7 +18,7 @@
       </li>
     </ul>
   </nz-sider>
-  <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '0px' : '200px'}">
-    <router-outlet></router-outlet>
+  <nz-layout [ngStyle]="{'margin-left': isCollapsed ? '0px' : '200px'}" class="flexwrapper">
+    <router-outlet ></router-outlet>
   </nz-layout>
 </nz-layout>

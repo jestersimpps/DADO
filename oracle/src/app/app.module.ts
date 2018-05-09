@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { PeersComponent } from './peers/peers.component';
 
 import { ROUTES } from './app.routes';
+import { UploadComponent } from './upload/upload.component';
+import { IpfsService } from './ipfs.service';
 
 @NgModule({
-  declarations: [AppComponent, PeersComponent],
+  declarations: [AppComponent, PeersComponent, UploadComponent],
   imports: [BrowserModule, BrowserAnimationsModule, NgZorroAntdModule.forRoot(), CommonModule, FormsModule, RouterModule.forRoot(ROUTES)],
-  providers: [],
+  providers: [IpfsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
