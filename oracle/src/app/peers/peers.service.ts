@@ -41,7 +41,6 @@ export class PeersService {
       }
       this.peersChange.emit(
         peers.map((peer) => {
-          console.log(peer);
           if (peer.addr) {
             const addr = peer.addr.toString();
             if (addr.indexOf('ipfs') >= 0) {

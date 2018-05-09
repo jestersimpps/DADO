@@ -2,11 +2,13 @@
 </nz-header>
 <nz-content style="margin:24px 16px 0;">
   <div style="padding:24px; background: #fff; min-height: 360px;">
-    <nz-list [nzDataSource]="peers" nzBordered nzSize="small" [nzHeader]="'Peers ('+ peers.length + ')'" [nzFooter]="''" [nzRenderItem]="item">
+    <nz-list [nzDataSource]="peers" nzBordered nzSize="small" [nzHeader]="peers.length ? 'Peers ('+ peers.length + ')' : 'Connecting...'"
+      [nzFooter]="''" [nzRenderItem]="item">
       <ng-template #item let-item>
-        <nz-list-item>
-          <i class="anticon anticon-swap"></i>
-          {{item}}
+        <nz-list-item [@listAnimation]="listAnimation">
+          <div>
+            <i class="anticon anticon-swap"></i>
+            {{item}}</div>
         </nz-list-item>
       </ng-template>
     </nz-list>
