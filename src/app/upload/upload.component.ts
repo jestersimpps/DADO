@@ -11,7 +11,7 @@ export class UploadComponent {
   loading = false;
   newFile: any;
   fileBuffer: any;
-  newIpfsHash: string;
+  uploads: string[] = [];
   @ViewChild('fileInput') fileInput: ElementRef;
 
   constructor(private ipfsService: IpfsService) {}
@@ -38,7 +38,8 @@ export class UploadComponent {
         if (err) {
           console.error(err);
         }
-        this.newIpfsHash = `https://ipfs.io/ipfs/${filesAdded[0].hash}`;
+        this.uploads.push(`https://ipfs.io/ipfs/${filesAdded[0].hash}`);
+        console.log(this.uploads);
         this.loading = false;
       },
     );
