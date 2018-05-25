@@ -22,15 +22,5 @@ export class AppComponent implements OnInit {
   changeTrigger(): void {
     this.triggerTemplate = this.customTrigger;
   }
-  ngOnInit() {
-    console.log(this.peers);
-    // this.ipfsService.init();
-    // this.ipfsService.peersChange.subscribe((peers) => {
-    //   this.peers = peers;
-    // });
-    // // TODO: figure out why this updates the dom, and not inside the subscription
-    // setInterval(() => {
-    //   this.peers.concat([]);
-    // }, 1000);
-  }
+  ngOnInit() {}
 }

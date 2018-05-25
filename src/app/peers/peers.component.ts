@@ -28,13 +28,5 @@ export class PeersComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    // this.peersSubscription = this.ipfsService.peersChange.subscribe((peers) => {
-    //   this.peers = peers;
-    // });
-    // // TODO: figure out why this updates the dom, and not inside the subscription
-    // setInterval(() => {
-    //   this.peers.concat([]);
-    // }, 1000);
-  }
+  ngOnInit() {}
 }
