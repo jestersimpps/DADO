@@ -1,13 +1,14 @@
 <nz-layout>
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'" style="overflow: auto; height: 100vh; position: fixed; left: 0">
     <div class="logo">
-      <img src="assets/ipfs.png" height="50" alt="">
+      <!-- <img src="assets/ipfs.png" height="50" alt=""> -->
+      <h1>DDAO</h1>
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
       <li nz-menu-item [routerLink]="['peers']" routerLinkActive="ant-menu-item-selected">
         <span>
           <i class="anticon anticon-bars"></i>
-          <span class="nav-text">Peers
+          <span class="nav-text">IPFS Peers
             <nz-badge [nzCount]="(peers | async).length" [nzStyle]="{ backgroundColor: '#fff',color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"></nz-badge>
           </span>
         </span>
@@ -21,7 +22,7 @@
       <li nz-menu-item [routerLink]="['github']" routerLinkActive="ant-menu-item-selected">
         <span>
           <i class="anticon anticon-github"></i>
-          <span class="nav-text">Github</span>
+          <span class="nav-text">Development</span>
         </span>
       </li>
     </ul>
