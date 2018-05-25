@@ -7,7 +7,8 @@ I think it is possible to completely decentralize, incentivize and democratize s
 
 - Github: repository, issues, pull requests
 - Gitcoin: incentivizing open source developers
-- Aragon: Governance 
+- IPFS/Orbit: Opinion Polling, Pre-voting, pre-governance
+- Aragon: Governance, voting
 
 Links:
 
