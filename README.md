@@ -1,7 +1,7 @@
-# Completely DAO Development.
+# Decentralized Autonomous Development Organization (DADO).
 
 The idea is to build an application that serves as a tool to support incentivized open source software development with decentralized governance.
-I think it is possible to completely decentralize, incentivize and democratize software development. Including all development decision making and steps.
+I think it is possible to completely decentralize, incentivize and democratize software development. Including all decision making steps.
 
 ![flow](https://raw.githubusercontent.com/jestersimpps/api-oracle/master/src/assets/idea.jpg)
 
