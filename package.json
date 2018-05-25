@@ -12,6 +12,9 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-redux/form": "^6.5.2",
+    "@angular-redux/router": "^6.3.1",
+    "@angular-redux/store": "^6.5.6",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
@@ -22,9 +25,14 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "github-api": "^3.0.0",
     "ng-zorro-antd": "^0.7.0-beta.5",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-observable": "^0.14.1",
+    "flux-standard-action": "^1.2.0"
   },
   "devDependencies": {
     "@angular/cli": "1.6.5",

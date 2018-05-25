@@ -3,7 +3,7 @@
   </nz-header>
   <nz-content style="margin:24px 16px 0;">
     <div style="padding:24px; background: #fff; min-height: 360px;">
-      <nz-list [nzDataSource]="peers" nzBordered nzSize="small" [nzHeader]="'Peers ('+ peers.length + ')'" [nzFooter]="''" [nzRenderItem]="item">
+      <nz-list [nzDataSource]="peers | async" nzBordered nzSize="small" [nzHeader]="'Peers ('+ (peers | async).length + ')'" [nzFooter]="''" [nzRenderItem]="item">
         <ng-template #item let-item>
           <nz-list-item [@listAnimation]="listAnimation">
             <div>

@@ -1,8 +1,10 @@
+import { IAppState } from './../store';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs';
 import { trigger, state, style, animate, transition, keyframes, query, stagger } from '@angular/animations';
 import { IpfsService } from '../ipfs.service';
+import { select, NgRedux } from '@angular-redux/store';
 
 @Component({
   selector: 'app-peers',
@@ -19,23 +21,20 @@ import { IpfsService } from '../ipfs.service';
     ]),
   ],
 })
-export class PeersComponent implements OnInit, OnDestroy {
-  private peers: string[] = [];
+export class PeersComponent implements OnInit {
+  // private peers: string[] = [];
   private peersSubscription: Subscription;
+  @select() peers;
 
-  constructor(private ipfsService: IpfsService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.peersSubscription = this.ipfsService.peersChange.subscribe((peers) => {
-      this.peers = peers;
-    });
-    // TODO: figure out why this updates the dom, and not inside the subscription
-    setInterval(() => {
-      this.peers.concat([]);
-    }, 1000);
-  }
-
-  ngOnDestroy() {
-    this.peersSubscription.unsubscribe();
+    // this.peersSubscription = this.ipfsService.peersChange.subscribe((peers) => {
+    //   this.peers = peers;
+    // });
+    // // TODO: figure out why this updates the dom, and not inside the subscription
+    // setInterval(() => {
+    //   this.peers.concat([]);
+    // }, 1000);
   }
 }

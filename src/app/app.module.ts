@@ -1,3 +1,4 @@
+import { IAppState, rootReducer, INITIAL_STATE } from './store';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,9 +13,11 @@ import { PeersComponent } from './peers/peers.component';
 import { ROUTES } from './app.routes';
 import { UploadComponent } from './upload/upload.component';
 import { IpfsService } from './ipfs.service';
+import { GithubComponent } from './github/github.component';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
 
 @NgModule({
-  declarations: [AppComponent, PeersComponent, UploadComponent],
+  declarations: [AppComponent, PeersComponent, UploadComponent, GithubComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -23,8 +26,13 @@ import { IpfsService } from './ipfs.service';
     CommonModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
+    NgReduxModule,
   ],
   providers: [IpfsService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(ngRedux: NgRedux<IAppState>) {
+    ngRedux.configureStore(rootReducer, INITIAL_STATE);
+  }
+}

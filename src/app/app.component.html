@@ -8,7 +8,7 @@
         <span>
           <i class="anticon anticon-bars"></i>
           <span class="nav-text">Peers
-            <nz-badge [nzCount]="peers.length" [nzStyle]="{ backgroundColor: '#fff',color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"></nz-badge>
+            <nz-badge [nzCount]="(peers | async).length" [nzStyle]="{ backgroundColor: '#fff',color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"></nz-badge>
           </span>
         </span>
       </li>
@@ -16,6 +16,12 @@
         <span>
           <i class="anticon anticon-upload"></i>
           <span class="nav-text">Upload</span>
+        </span>
+      </li>
+      <li nz-menu-item [routerLink]="['github']" routerLinkActive="ant-menu-item-selected">
+        <span>
+          <i class="anticon anticon-github"></i>
+          <span class="nav-text">Github</span>
         </span>
       </li>
     </ul>

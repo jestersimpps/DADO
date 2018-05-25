@@ -27,6 +27,20 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
+"@angular-redux/form@^6.5.2":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@angular-redux/form/-/form-6.7.0.tgz#ac88e1cc619e8715aaad45cf629a93d251b5612d"
+  dependencies:
+    immutable "^3.8.1"
+
+"@angular-redux/router@^6.3.1":
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@angular-redux/router/-/router-6.4.1.tgz#853a53770a63db687f770741aa7dfd920a7632e9"
+
+"@angular-redux/store@^6.5.6":
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/@angular-redux/store/-/store-6.6.0.tgz#02b67c091ed9c1bdae48c05a5d5d0041c87577aa"
+
 "@angular/animations@^5.2.0":
   version "5.2.10"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.10.tgz#61718792e0922ac622fd7c6dfb0afbb996638692"
@@ -566,7 +580,7 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
-axios@^0.15.3:
+axios@^0.15.2, axios@^0.15.3:
   version "0.15.3"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.15.3.tgz#2c9d638b2e191a08ea1d6cc988eadd6ba5bdc053"
   dependencies:
@@ -1670,6 +1684,10 @@ decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
 
+deep-diff@^0.3.5:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
+
 deep-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
@@ -2448,6 +2466,12 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
+flux-standard-action@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/flux-standard-action/-/flux-standard-action-1.2.0.tgz#d2d41612dde4cebddd11a76cfead8e84fc69ebdc"
+  dependencies:
+    lodash "^4.0.0"
+
 follow-redirects@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.0.0.tgz#8e34298cbd2e176f254effec75a1c78cc849fd37"
@@ -2654,6 +2678,15 @@ getpass@^0.1.1:
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+github-api@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/github-api/-/github-api-3.0.0.tgz#2832f98d0d3a83f1485e2db32c9259e4b9c40a75"
+  dependencies:
+    axios "^0.15.2"
+    debug "^2.2.0"
+    js-base64 "^2.1.9"
+    utf8 "^2.1.1"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -3118,6 +3151,10 @@ ignore@^3.3.5:
 image-size@~0.5.0:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+
+immutable@^3.8.1:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
 import-local@^1.0.0:
   version "1.0.0"
@@ -3872,6 +3909,10 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
+lodash-es@^4.2.1:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.10.tgz#62cd7104cdf5dd87f235a837f0ede0e8e5117e05"
+
 lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
@@ -3900,7 +3941,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.5.0, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.5.0, lodash@~4.17.4:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -3939,7 +3980,7 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -5551,6 +5592,25 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
+redux-logger@^3.0.1:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
+  dependencies:
+    deep-diff "^0.3.5"
+
+redux-observable@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.14.1.tgz#9f3d870c69388fdc427ded6770a3e326f3b69693"
+
+redux@^3.6.0:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
+
 reflect-metadata@^0.1.2:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
@@ -6536,6 +6596,10 @@ symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
+symbol-observable@^1.0.3:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+
 tapable@^0.2.7:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
@@ -6947,6 +7011,10 @@ useragent@2.2.1:
   dependencies:
     lru-cache "2.2.x"
     tmp "0.0.x"
+
+utf8@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/utf8/-/utf8-2.1.2.tgz#1fa0d9270e9be850d9b05027f63519bf46457d96"
 
 util-deprecate@~1.0.1:
   version "1.0.2"
