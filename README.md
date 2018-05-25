@@ -9,6 +9,8 @@ I think it is possible to completely decentralize, incentivize and democratize s
 - Gitcoin: incentivizing open source developers
 - Aragon: Governance 
 
+Links:
 
 https://medium.com/gitcoin/open-source-money-will-buidl-the-open-source-ecosystem-f4169def8748
+https://gist.github.com/izqui/2a02c337aafa225c403de9c988cb78a0
 
